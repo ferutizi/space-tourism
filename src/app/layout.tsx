@@ -1,9 +1,25 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Barlow, Barlow_Condensed, Bellefair } from 'next/font/google'
 import './globals.css'
 import { IconHamburger, Logo } from './assets/icons/shared'
 
-const inter = Inter({ subsets: ['latin'] })
+const barlow = Barlow({
+  weight: ['400', '600', '700', '800'],
+  subsets: ['latin'],
+  variable: '--font-barlow'
+})
+
+const barlowCondensed = Barlow_Condensed({
+  weight: ['400', '600', '700', '800'],
+  subsets: ['latin'],
+  variable: '--font-barlowCondensed'
+})
+
+const bellefair = Bellefair({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--font-bellefair'
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,7 +33,7 @@ export default function RootLayout ({
 }>): JSX.Element {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${barlow.variable} ${bellefair.variable} ${barlowCondensed.variable}`}>
         <header className='flex justify-between items-center p-6'>
           <Logo height={48} width={48}/>
           <IconHamburger height={24} width={21} />
