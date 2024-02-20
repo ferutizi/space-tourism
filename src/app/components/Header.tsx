@@ -1,4 +1,4 @@
-import { Logo, IconHamburger } from '../assets/icons/shared'
+import { Logo, IconHamburger } from '../../../public/assets/icons/shared'
 
 export default function Header (): JSX.Element {
   return (

@@ -40,25 +40,25 @@ h1, h2, h3 {
 }
 
 .home {
-  background-image: url('./assets/images/home/background-home-mobile.jpg');
+  background-image: url('../../public/assets/images/home/background-home-mobile.jpg');
   background-repeat: none;
   background-size: cover;
 } 
 
 .destination {
-  background-image: url('./assets/images/destination/background-destination-mobile.jpg');
+  background-image: url('../../public/assets/images/destination/background-destination-mobile.jpg');
   background-repeat: none;
   background-size: cover;
 } 
 
 .crew {
-  background-image: url('./assets/images/crew/background-crew-mobile.jpg');
+  background-image: url('../../public/assets/images/crew/background-crew-mobile.jpg');
   background-repeat: none;
   background-size: cover;
 } 
 
 .technology {
-  background-image: url('./assets/images/technology/background-technology-mobile.jpg');
+  background-image: url('../../public/assets/images/technology/background-technology-mobile.jpg');
   background-repeat: none;
   background-size: cover;
 } 
