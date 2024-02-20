@@ -17,7 +17,7 @@
 }
 
 body {
-  font-family: var(--font-barlow) !important;
+  font-family: var(--font-barlow);
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -27,8 +27,44 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-h1 {
-  font-family: var(--font-bellefair) !important;
+h1, h2, h3 {
+  font-family: var(--font-bellefair);
+}
+
+.font-bell {
+  font-family: var(--font-bellefair);
+}
+
+.alter-font {
+  font-family: var(--font-barlowCondensed);
+}
+
+.home {
+  background-image: url('./assets/images/home/background-home-mobile.jpg');
+  background-repeat: none;
+  background-size: cover;
+} 
+
+.destination {
+  background-image: url('./assets/images/destination/background-destination-mobile.jpg');
+  background-repeat: none;
+  background-size: cover;
+} 
+
+.crew {
+  background-image: url('./assets/images/crew/background-crew-mobile.jpg');
+  background-repeat: none;
+  background-size: cover;
+} 
+
+.technology {
+  background-image: url('./assets/images/technology/background-technology-mobile.jpg');
+  background-repeat: none;
+  background-size: cover;
+} 
+
+.page-h {
+  height: calc(100vh - 6rem);
 }
 
 @layer utilities {
