@@ -1,16 +1,15 @@
 import type { Metadata } from 'next'
 import { Barlow, Barlow_Condensed, Bellefair } from 'next/font/google'
 import './globals.css'
-import { IconHamburger, Logo } from './assets/icons/shared'
 
 const barlow = Barlow({
-  weight: ['400', '600', '700', '800'],
+  weight: ['100', '200', '400', '600', '700', '800'],
   subsets: ['latin'],
   variable: '--font-barlow'
 })
 
 const barlowCondensed = Barlow_Condensed({
-  weight: ['400', '600', '700', '800'],
+  weight: ['100', '200', '400', '600', '700', '800'],
   subsets: ['latin'],
   variable: '--font-barlowCondensed'
 })
@@ -34,10 +33,6 @@ export default function RootLayout ({
   return (
     <html lang="en">
       <body className={`${barlow.variable} ${bellefair.variable} ${barlowCondensed.variable}`}>
-        <header className='flex justify-between items-center p-6'>
-          <Logo height={48} width={48}/>
-          <IconHamburger height={24} width={21} />
-        </header>
         {children}
       </body>
     </html>
