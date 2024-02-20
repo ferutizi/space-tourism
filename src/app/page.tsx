@@ -11,7 +11,7 @@ export default function Home (): JSX.Element {
         <article>
           <p className='alter-font text-lg font-thin tracking-widest'>{subtitle.toUpperCase()}</p>
           <h1 className='text-7xl my-2'>SPACE</h1>
-          <p className='font-light'>Let’s face it; if you want to go to space,
+          <p className='font-thin'>Let’s face it; if you want to go to space,
             you might as well genuinely go to outer space and not hover
             kind of on the edge of it. Well sit back, and relax because
             we’ll give you a truly out of this world experience!
