@@ -7,12 +7,13 @@ import Subtitle from '../components/Subtitle'
 import { useState } from 'react'
 
 export default function DestinationPage (): JSX.Element {
-/*   const destinations = {
+  const initialDestination = data.destinations.filter(e => e.name === 'Moon')
+  const [currentDestination, setCurrentDestination] = useState(initialDestination[0])
 
-  } */
-
-  const [currentDestination, setCurrentDestination] = useState()
-  const [dest] = data.destinations
+  const handleDestination = (name: string): void => {
+    const newDestination = data.destinations.filter(e => e.name === name)
+    setCurrentDestination(newDestination[0])
+  }
 
   return (
     <section className='destination min-h-screen'>
@@ -22,25 +23,26 @@ export default function DestinationPage (): JSX.Element {
         <img
           className='h-48'
           src='/assets/images/destination/image-moon.webp'
-          alt={dest.name}
-          title={dest.name}
+          alt={currentDestination.name}
+          title={currentDestination.name}
         />
         <nav className='flex gap-4 my-2'>
           {data.destinations.map(e =>
             <button
+              onClick={() => { handleDestination(e.name) }}
               key={e.name}
               className='alter-font tracking-widest text-sm font-thin'
             >{e.name.toUpperCase()}
             </button>
           )}
         </nav>
-        <h1 className='text-5xl'>{dest.name.toUpperCase()}</h1>
-        <p className='font-thin'>{dest.description}</p>
+        <h1 className='text-5xl'>{currentDestination.name.toUpperCase()}</h1>
+        <p className='font-thin'>{currentDestination.description}</p>
         <hr className='w-full opacity-40 my-4'></hr>
         <h3 className='alter-font text-sm font-thin tracking-widest opacity-80'>{'Avg. distance'.toUpperCase()}</h3>
-        <p className='font-bell text-2xl opacity-80'>{dest.distance.toUpperCase()}</p>
+        <p className='font-bell text-2xl opacity-80'>{currentDestination.distance.toUpperCase()}</p>
         <h3 className='alter-font text-sm font-thin tracking-widest opacity-80'>{'Est. travel time'.toUpperCase()}</h3>
-        <p className='font-bell text-2xl opacity-80 mb-6'>{dest.travel.toUpperCase()}</p>
+        <p className='font-bell text-2xl opacity-80 mb-6'>{currentDestination.travel.toUpperCase()}</p>
       </article>
     </section>
   )
