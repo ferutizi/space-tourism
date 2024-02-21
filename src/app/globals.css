@@ -72,6 +72,38 @@ h1, h2, h3 {
   background-size: cover;
 }
 
+/* TABLET BACKGROUND */ 
+@media (min-width: 768px) {
+  .home {
+    background-image: url('../../public/assets/images/home/background-home-tablet.jpg');
+  } 
+  .destination {
+    background-image: url('../../public/assets/images/destination/background-destination-tablet.jpg');
+  } 
+  .crew {
+    background-image: url('../../public/assets/images/crew/background-crew-tablet.jpg');
+  } 
+  .technology {
+    background-image: url('../../public/assets/images/technology/background-technology-tablet.jpg');
+  }
+}
+
+/* DESKTOP BACKGROUND */
+@media (min-width: 1440px) {
+  .home {
+    background-image: url('../../public/assets/images/home/background-home-desktop.jpg');
+  } 
+  .destination {
+    background-image: url('../../public/assets/images/destination/background-destination-desktop.jpg');
+  } 
+  .crew {
+    background-image: url('../../public/assets/images/crew/background-crew-desktop.jpg');
+  } 
+  .technology {
+    background-image: url('../../public/assets/images/technology/background-technology-desktop.jpg');
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
