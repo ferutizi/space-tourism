@@ -35,7 +35,7 @@ export default function MemberPage (): JSX.Element {
             <div
               onClick={() => { handleMember(e.name) }}
               key={e.name}
-              className={`w-3 h-3 bg-white rounded-full opacity-50 ${e.name === currentMember.name && 'opacity-100'}`}
+              className={`w-3 h-3 bg-white rounded-full ${e.name === currentMember.name ? 'opacity-100' : 'opacity-50'}`}
             >
             </div>
           )}
