@@ -41,6 +41,7 @@ export default function TechnologyPage (): JSX.Element {
         </nav>
         <div>
           <div className='flex flex-col gap-1'>
+            <p className='alter-font opacity-80 tracking-widest'>{'The terminology...'.toUpperCase()}</p>
             <h1 className='font-bell text-2xl tracking-wider mb-4'>{currentTech.name.toUpperCase()}</h1>
           </div>
           <p className='alter-font font-thin mb-8 tracking-widest px-6'>{currentTech.description}</p>

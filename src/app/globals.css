@@ -27,6 +27,11 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.over-blur {
+  backdrop-filter: blur(1.5rem);
+  background-color: rgba(66, 77, 97, 0.1);
+}
+
 h1, h2, h3 {
   font-family: var(--font-bellefair);
 }
