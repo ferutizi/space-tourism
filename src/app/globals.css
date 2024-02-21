@@ -39,6 +39,10 @@ h1, h2, h3 {
   font-family: var(--font-barlowCondensed);
 }
 
+.page-h {
+  height: calc(100vh - 6rem);
+}
+
 .home {
   background-image: url('../../public/assets/images/home/background-home-mobile.jpg');
   background-repeat: none;
@@ -61,10 +65,6 @@ h1, h2, h3 {
   background-image: url('../../public/assets/images/technology/background-technology-mobile.jpg');
   background-repeat: none;
   background-size: cover;
-} 
-
-.page-h {
-  height: calc(100vh - 6rem);
 }
 
 @layer utilities {
