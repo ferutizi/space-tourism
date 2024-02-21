@@ -14,7 +14,11 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
       },
       fontSize: {
-        '7xl': '5rem'
+        '7xl': '5rem',
+        '10xl': '10rem'
+      },
+      textUnderlineOffset: {
+        custom: '2rem'
       }
     }
   },
