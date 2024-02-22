@@ -12,7 +12,7 @@ export default function Subtitle (): JSX.Element {
   }
 
   return (
-    <h2 className='alter-font text-center text-white text-md tracking-widest'>
+    <h2 className='alter-font text-center text-white text-md tracking-widest md:text-left md:pl-6 md:text-xl md:my-6'>
       <span className='me-2 text-stone-400 font-semibold'>
         {info[path][0]}
       </span>

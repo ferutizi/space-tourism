@@ -19,6 +19,9 @@ const config: Config = {
       },
       textUnderlineOffset: {
         custom: '2rem'
+      },
+      height: {
+        100: '34rem'
       }
     }
   },

@@ -86,6 +86,10 @@ h1, h2, h3 {
   .technology {
     background-image: url('../../public/assets/images/technology/background-technology-tablet.jpg');
   }
+  /* Heigth without Header Nav and Subtitle */
+  .page-h-tablet {
+    height: calc(100vh - 10rem);
+  }
 }
 
 /* DESKTOP BACKGROUND */
