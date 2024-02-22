@@ -19,18 +19,18 @@ export default function MemberPage (): JSX.Element {
   return (
     <section className='crew h-screen'>
       <Header />
-      <article className='page-h flex flex-col items-center justify-start text-center pb-4 px-6'>
-        <Subtitle />
+      <Subtitle />
+      <article className='page-h flex flex-col items-center justify-start text-center pb-4 px-6 md:flex-col-reverse md:justify-between md:pb-0 md:pt-6 page-h-tablet'>
         <div className='flex flex-col items-center w-full'>
           <img
-            className='h-52 mt-8'
+            className='h-52 mt-8 md:h-100'
             src={`/assets/images/crew/image-${normalizedName}.webp`}
             alt={currentMember.name}
             title={currentMember.name}
           />
           <hr className='w-full opacity-40'></hr>
         </div>
-        <nav className='flex gap-4 my-8'>
+        <nav className='flex gap-4 my-8 md:my-2'>
           {data.crew.map(e =>
             <div
               onClick={() => { handleMember(e.name) }}
@@ -41,11 +41,11 @@ export default function MemberPage (): JSX.Element {
           )}
         </nav>
         <div>
-          <div className='flex flex-col gap-1'>
-            <p className='font-bell text-stone-400 text-lg'>{currentMember.role.toUpperCase()}</p>
-            <h1 className='font-bell text-2xl tracking-wider mb-4'>{currentMember.name.toUpperCase()}</h1>
+          <div className='flex flex-col gap-1 md:gap-2'>
+            <p className='font-bell text-stone-400 text-lg md:text-2xl'>{currentMember.role.toUpperCase()}</p>
+            <h1 className='font-bell text-2xl tracking-wider mb-4 md:text-4xl'>{currentMember.name.toUpperCase()}</h1>
           </div>
-          <p className='alter-font font-thin mb-8 tracking-widest'>{currentMember.bio}</p>
+          <p className='alter-font font-thin mb-8 tracking-widest md:px-20'>{currentMember.bio}</p>
         </div>
       </article>
     </section>
