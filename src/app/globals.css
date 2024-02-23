@@ -32,6 +32,13 @@ body {
   background-color: rgba(66, 77, 97, 0.1);
 }
 
+@media (min-width: 1024px) {
+  .over-blur-desktop {
+    backdrop-filter: blur(1.5rem);
+    background-color: rgba(66, 77, 97, 0.1);
+  }
+}
+
 h1, h2, h3 {
   font-family: var(--font-bellefair);
 }
@@ -105,6 +112,9 @@ h1, h2, h3 {
   } 
   .technology {
     background-image: url('../../public/assets/images/technology/background-technology-desktop.jpg');
+  }
+  .page-h-desktop {
+    height: calc(100vh - 7.75rem);
   }
 }
 
