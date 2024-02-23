@@ -37,29 +37,13 @@ export default function MemberPage (): JSX.Element {
 
   const DetailsComponent = (): JSX.Element => {
     return (
-      <>
+      <div>
         <div className='flex flex-col gap-1 md:gap-2 lg:gap-4'>
           <p className='font-bell text-stone-400 text-lg md:text-2xl lg:text-3xl'>{currentMember.role.toUpperCase()}</p>
           <h1 className='font-bell text-2xl tracking-wider mb-4 md:text-4xl lg:text-5xl'>{currentMember.name.toUpperCase()}</h1>
         </div>
         <p className='alter-font font-thin mb-8 tracking-widest md:px-20 lg:px-0 max-w-xl lg:max-w-md lg:text-lg'>{currentMember.bio}</p>
-      </>
-    )
-  }
-
-  const ImageComponent = (): JSX.Element => {
-    return (
-      <>
-        <div className='flex flex-col items-center'>
-          <img
-            className='h-52 mt-8 md:h-100'
-            src={`/assets/images/crew/image-${normalizedName}.webp`}
-            alt={currentMember.name}
-            title={currentMember.name}
-            />
-          <hr className='w-full opacity-40 lg:hidden'></hr>
-        </div>
-      </>
+      </div>
     )
   }
 
@@ -68,8 +52,16 @@ export default function MemberPage (): JSX.Element {
       <Header />
       <Subtitle />
       <article className='page-h flex flex-col items-center justify-start text-center pb-4 px-6 md:flex-col-reverse md:justify-between md:pb-0 md:pt-6 page-h-tablet lg:flex-row-reverse lg:px-40 page-h-desktop lg:items-end lg:justify-center lg:gap-40'>
-        <ImageComponent />
-        {currentWidth <= 1024
+        <div className='flex flex-col items-center'>
+          <img
+            className='h-52 mt-8 md:h-96 lg:h-full'
+            src={`/assets/images/crew/image-${normalizedName}.webp`}
+            alt={currentMember.name}
+            title={currentMember.name}
+            />
+          <hr className='w-full opacity-40 lg:hidden'></hr>
+        </div>
+        {currentWidth < 1024
           ? <>
               <NavComponent />
               <DetailsComponent />
