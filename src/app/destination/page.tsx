@@ -35,7 +35,7 @@ export default function DestinationPage (): JSX.Element {
           )}
         </nav>
         <h1 className='text-5xl md:text-7xl'>{currentDest.name.toUpperCase()}</h1>
-        <p className='font-thin md:px-20 lg:px-0'>{currentDest.description}</p>
+        <p className='font-thin md:px-20 lg:px-0 max-w-96 md:max-w-none'>{currentDest.description}</p>
         <hr className='w-full opacity-40 my-3 md:w-9/12 md:my-0'></hr>
         <div className='mb-6 flex flex-col gap-5 md:flex-row'>
           <div className='flex flex-col gap-2'>
@@ -57,13 +57,12 @@ export default function DestinationPage (): JSX.Element {
       <Subtitle />
       <article className='min-h-screen flex flex-col items-center justify-between text-center pb-4 px-6 md:min-h-1 md:justify-around page-h-tablet lg:flex-row lg:mx-40 lg:gap-32 page-h-desktop lg:min-h-1 lg:pb-0'>
         <img
-          className='h-48 md:h-72 md:w-72 lg:w-98 lg:h-98'
+          className='h-48 md:h-72 md:w-72 mt-6 lg:w-98 lg:h-98'
           src={`/assets/images/destination/image-${currentDest.name.toLowerCase()}.webp`}
           alt={currentDest.name}
           title={currentDest.name}
         />
-
-          {currentWidth <= 1024
+          {currentWidth !== undefined && currentWidth <= 1024
             ? <MainContent />
             : <div className='lg:flex lg:flex-col lg:items-left lg:w-1/3 lg:text-left lg:gap-6'><MainContent /></div>
           }

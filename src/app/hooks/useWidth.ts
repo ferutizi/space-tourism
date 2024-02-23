@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from 'react'
 
-export default function useWidth (): number | undefined {
+export default function useWidth (): number {
   const isBrowser = typeof window !== 'undefined'
 
-  const [width, setWidth] = useState<number | undefined>(isBrowser ? window.innerWidth : undefined)
+  const [width, setWidth] = useState<number>(isBrowser ? window.innerWidth : 1024)
 
   useEffect(() => {
     window.addEventListener('resize', handleResize)
