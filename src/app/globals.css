@@ -114,7 +114,7 @@ h1, h2, h3 {
     background-image: url('../../public/assets/images/technology/background-technology-desktop.jpg');
   }
   .page-h-desktop {
-    height: calc(100vh - 7.75rem);
+    height: calc(100vh - 12.75rem);
   }
 }
 

@@ -21,9 +21,11 @@ const config: Config = {
         custom: '2rem'
       },
       height: {
+        98: '26rem',
         100: '34rem'
       },
       width: {
+        98: '26rem',
         99: '28rem'
       }
     }
