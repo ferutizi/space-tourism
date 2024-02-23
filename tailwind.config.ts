@@ -26,7 +26,8 @@ const config: Config = {
       },
       width: {
         98: '26rem',
-        99: '28rem'
+        99: '28rem',
+        100: '32rem'
       }
     }
   },
