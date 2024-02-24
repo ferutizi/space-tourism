@@ -10,8 +10,6 @@ export default function DestinationPage (): JSX.Element {
   const initialDest = data.destinations.filter(e => e.name === 'Moon')
   const [currentDest, setCurrentDest] = useState(initialDest[0])
 
-  const underlineText = 'underline underline-offset-8 font-normal decoration-4'
-
   const handleDestination = (name: string): void => {
     const newDestination = data.destinations.filter(e => e.name === name)
     setCurrentDest(newDestination[0])
@@ -25,7 +23,7 @@ export default function DestinationPage (): JSX.Element {
             <button
               onClick={() => { handleDestination(e.name) }}
               key={e.name}
-              className={`alter-font ${e.name === currentDest.name && underlineText} tracking-widest text-sm font-thin md:text-xl lg:text-base`}
+              className={`alter-font ${e.name === currentDest.name && 'underline'} underline-offset-8 decoration-4 hover:underline hover:decoration-stone-400 tracking-widest text-sm font-thin md:text-xl lg:text-base`}
             >{e.name.toUpperCase()}
             </button>
           )}

@@ -27,7 +27,7 @@ export default function TechnologyPage (): JSX.Element {
           <div
             onClick={() => { handleTech(e.name) }}
             key={e.name}
-            className={`font-bell flex justify-center items-center w-11 h-11 rounded-full border border-opacity-40 border-white md:w-14 md:h-14 md:text-xl lg:h-20 lg:w-20 lg:text-3xl ${e.name === currentTech.name ? 'bg-white text-stone-950' : 'bg-transparent text-white'}`}
+            className={`font-bell flex justify-center items-center w-11 h-11 rounded-full border border-opacity-40 border-white md:w-14 md:h-14 md:text-xl lg:h-20 lg:w-20 lg:text-3xl cursor-pointer ${e.name === currentTech.name ? 'bg-white text-stone-950' : 'bg-transparent text-white hover:border-opacity-100'}`}
           >{i + 1}
           </div>
         )}
