@@ -22,7 +22,7 @@ export default function TechnologyPage (): JSX.Element {
 
   const NavComponent = (): JSX.Element => {
     return (
-      <nav className='flex gap-4 my-8 md:my-2 lg:flex-col lg:gap-8'>
+      <nav className='flex gap-4 my-8 md:my-2 lg:flex-col lg:gap-8 lg:order-1'>
         {data.technology.map((e, i) =>
           <div
             onClick={() => { handleTech(e.name) }}
@@ -51,25 +51,17 @@ export default function TechnologyPage (): JSX.Element {
     <section className='technology h-screen'>
       <Header />
       <Subtitle />
-      <article className='page-h flex flex-col items-center justify-start text-center pb-4 page-h-tablet md:justify-around lg:flex-row-reverse page-h-desktop lg:justify-center lg:gap-32'>
+      <article className='page-h flex flex-col items-center justify-start text-center pb-4 page-h-tablet md:justify-around lg:flex-row-reverse page-h-desktop lg:justify-center lg:gap-32 lg:pb-0'>
         <div className='flex flex-col items-center w-full lg:w-100'>
           <img
-            className='h-40 mt-8 md:w-full md:h-full'
+            className='h-40 mt-8 md:w-full md:h-full lg:mt-0'
             src={`/assets/images/technology/image-${normalizedName}-${currentWidth <= 1024 ? 'landscape' : 'portrait'}.jpg`}
             alt={currentTech.name}
             title={currentTech.name}
           />
         </div>
-        {currentWidth < 1024
-          ? <>
-              <NavComponent />
-              <DetailsComponent />
-            </>
-          : <div className='flex lg:gap-20'>
-              <NavComponent />
-              <DetailsComponent />
-            </div>
-        }
+        <NavComponent />
+        <DetailsComponent />
       </article>
     </section>
   )
