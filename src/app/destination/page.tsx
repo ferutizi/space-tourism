@@ -5,14 +5,10 @@ import data from '../../../data.json'
 import '../globals.css'
 import Subtitle from '../components/Subtitle'
 import { useState } from 'react'
-import useWidth from '../hooks/useWidth'
 
 export default function DestinationPage (): JSX.Element {
   const initialDest = data.destinations.filter(e => e.name === 'Moon')
   const [currentDest, setCurrentDest] = useState(initialDest[0])
-
-  // Current user width screen
-  const currentWidth = useWidth()
 
   const underlineText = 'underline underline-offset-8 font-normal decoration-4'
 
@@ -23,8 +19,8 @@ export default function DestinationPage (): JSX.Element {
 
   const MainContent = (): JSX.Element => {
     return (
-      <>
-        <nav className='flex gap-4 my-2 md:gap-16 lg:gap-8'>
+      <div className='flex flex-col gap-6 lg:text-left lg:justify-start'>
+        <nav className='flex gap-4 my-2 md:gap-12 lg:gap-8 justify-center lg:justify-start'>
           {data.destinations.map(e =>
             <button
               onClick={() => { handleDestination(e.name) }}
@@ -34,10 +30,10 @@ export default function DestinationPage (): JSX.Element {
             </button>
           )}
         </nav>
-        <h1 className='text-5xl md:text-7xl'>{currentDest.name.toUpperCase()}</h1>
-        <p className='font-thin md:px-20 lg:px-0 max-w-96 md:max-w-none'>{currentDest.description}</p>
-        <hr className='w-full opacity-40 my-3 md:w-9/12 md:my-0'></hr>
-        <div className='mb-6 flex flex-col gap-5 md:flex-row'>
+        <h1 className='text-5xl md:text-7xl lg:text-8xl'>{currentDest.name.toUpperCase()}</h1>
+        <p className='font-thin md:px-20 lg:px-0 max-w-96 md:max-w-none lg:max-w-md lg:text-lg'>{currentDest.description}</p>
+        <hr className='w-full opacity-40 my-3 md:w-9/12 md:my-0 md:mx-auto lg:mx-0 lg:w-full'></hr>
+        <div className='mb-6 flex flex-col gap-5 md:flex-row md:justify-center lg:justify-start'>
           <div className='flex flex-col gap-2'>
             <h3 className='alter-font text-sm font-thin tracking-widest opacity-80 md:text-md'>{'Avg. distance'.toUpperCase()}</h3>
             <p className='font-bell text-2xl opacity-80 md:text-3xl'>{currentDest.distance.toUpperCase()}</p>
@@ -47,7 +43,7 @@ export default function DestinationPage (): JSX.Element {
             <p className='font-bell text-2xl opacity-80 md:text-3xl'>{currentDest.travel.toUpperCase()}</p>
           </div>
         </div>
-      </>
+      </div>
     )
   }
 
@@ -62,10 +58,7 @@ export default function DestinationPage (): JSX.Element {
           alt={currentDest.name}
           title={currentDest.name}
         />
-          {currentWidth !== undefined && currentWidth <= 1024
-            ? <MainContent />
-            : <div className='lg:flex lg:flex-col lg:items-left lg:w-1/3 lg:text-left lg:gap-6'><MainContent /></div>
-          }
+        <MainContent />
       </article>
     </section>
   )
