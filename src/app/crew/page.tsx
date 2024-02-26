@@ -47,10 +47,10 @@ export default function MemberPage (): JSX.Element {
     <section className='crew h-screen'>
       <Header />
       <Subtitle />
-      <article className='page-h flex flex-col items-center justify-start text-center pb-4 px-6 md:flex-col-reverse md:justify-between md:pb-0 md:pt-6 page-h-tablet lg:flex-row-reverse lg:px-40 page-h-desktop lg:justify-center lg:gap-40'>
-        <div className='flex flex-col items-center'>
+      <article className='page-h flex flex-col items-center justify-start text-center pb-4 px-6 md:flex-col-reverse md:justify-between md:pb-0 md:pt-6 page-h-tablet lg:flex-row-reverse lg:px-40 page-h-desktop lg:justify-center lg:gap-40 overflow-hidden'>
+        <div className='flex flex-col items-center overflow-hidden'>
           <img
-            className='h-52 mt-8 md:h-100 lg:h-full lg:m-0'
+            className='h-52 mt-8 md:h-100 lg:h-auto lg:m-0'
             src={`/assets/images/crew/image-${normalizedName}.webp`}
             alt={currentMember.name}
             title={currentMember.name}

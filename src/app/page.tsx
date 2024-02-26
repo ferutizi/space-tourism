@@ -19,7 +19,7 @@ export default function Home (): JSX.Element {
             we’ll give you a truly out of this world experience!
           </p>
         </article>
-        <div className='font-bell flex justify-center items-center bg-white text-xl w-36 h-36 text-black rounded-full mb-6 md:w-64 md:h-64 md:text-4xl lg:w-56 lg:h-56 lg:mb-0'>
+        <div className='font-bell flex justify-center items-center bg-white text-xl w-36 h-36 text-black rounded-full mb-6 md:w-64 md:h-64 md:text-4xl lg:w-56 lg:h-56 lg:mb-0 hover-shadow'>
           EXPLORE
         </div>
       </main>
